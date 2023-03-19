@@ -110,18 +110,16 @@ impl<T:PartialOrd+Copy>MaxHeap<T>{
 
 #[cfg(test)]
 pub mod test{
-    use crate::heap::*;
-
     use super::MaxHeap;
     #[test]
     pub fn test_heap(){
         let mut heap=MaxHeap::new();
         assert!(heap.is_empty()==true);
-        for i in 1..10{
+        for i in 1..1000000{
             heap.add(i);
         }
-        assert_eq!(heap.get_max_element().unwrap(),9);
+        assert_eq!(heap.get_max_element().unwrap(),1000000-1);
         heap.extract_max_element();
-        assert_eq!(heap.get_max_element().unwrap(),8);
+        assert_eq!(heap.get_max_element().unwrap(),1000000-2);
     }
 }
