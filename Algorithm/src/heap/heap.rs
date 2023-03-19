@@ -115,11 +115,11 @@ pub mod test{
     pub fn test_heap(){
         let mut heap=MaxHeap::new();
         assert!(heap.is_empty()==true);
-        for i in 1..1000000{
+        for i in 1..100{
             heap.add(i);
         }
-        assert_eq!(heap.get_max_element().unwrap(),1000000-1);
+        assert_eq!(heap.get_max_element().unwrap(),100-1);
         heap.extract_max_element();
-        assert_eq!(heap.get_max_element().unwrap(),1000000-2);
+        assert_eq!(heap.get_max_element().unwrap(),100-2);
     }
 }

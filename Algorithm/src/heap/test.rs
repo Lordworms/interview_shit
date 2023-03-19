@@ -25,6 +25,5 @@ pub mod test{
             pos:4,
         };
         assert!(node_1!=node_2);
-        
     }
 }
